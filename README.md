@@ -30,3 +30,9 @@ The following points are made possible with DI
 - Single Responsibility
 - Lifetime of objects
 - Extensible
+
+
+But manual di is not sufficient due to various reasons among which the need to create a lot of objects while creating classes is one of them
+So for the same we will use Dagger 2 
+
+t1/di/st3/dagger/inject-component 
