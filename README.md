@@ -19,9 +19,14 @@ while registering 2 things happen : save user to db & send email to user after s
 Email Service is responsible to send email
 User Repository is responsible to save user
 
-User Registration Service creates object of email service and user repo inside it
-This is not dependency injection
+User Registration is changed to accept objects as injection
+This is manual DI
 
-This is not a good practice, even though it works
+User Repo and Email Service are created and passed as parameters
 
-In st1/manual-di this is fixed with di
+The following points are made possible with DI
+
+- Unit Testing
+- Single Responsibility
+- Lifetime of objects
+- Extensible

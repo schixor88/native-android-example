@@ -8,8 +8,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //TODO 3 create objects here to pass user registration service
+        val userRepository = UserRepository()
+        val emailService = EmailService()
+
         //creating object of user reg service
-        val userRegistrationService = UserRegistrationService()
+        //TODO 4 Update constructor, manual DI achieved
+        val userRegistrationService = UserRegistrationService(userRepository, emailService)
         //register the user
         userRegistrationService.registerUser("kushagra@gmail.com","123123")
 
